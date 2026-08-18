@@ -17,6 +17,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+    /* ===== Contact form: mailto + success message + reset ===== */
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+
+  if (contactForm && formSuccess) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      const body = `Name: ${name}%0AEmail: ${email}%0A%0A${message}`;
+      const mailtoLink = `mailto:info@silverlinespinningmills.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+      window.location.href = mailtoLink;
+
+      // Show success message
+      contactForm.style.display = 'none';
+      formSuccess.classList.add('visible');
+
+      // Reset form and revert to form view after a few seconds
+      setTimeout(() => {
+        contactForm.reset();
+        contactForm.style.display = 'flex';
+        formSuccess.classList.remove('visible');
+      }, 4000);
+    });
+  }
 
   /* ===== Mobile menu toggle ===== */
   const navToggle = document.getElementById('navToggle');
@@ -118,8 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===== Scroll-reveal animation ===== */
-  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+ 
+  const revealSelector = '.reveal-on-scroll, .reveal-left, .reveal-right, .reveal-up, .reveal-down';
+  const revealElements = document.querySelectorAll(revealSelector);
 
   if (revealElements.length > 0 && 'IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries) => {
@@ -135,8 +166,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => observer.observe(el));
   } else {
-    // Fallback: show everything if IntersectionObserver isn't supported
     revealElements.forEach(el => el.classList.add('visible'));
   }
-
 });

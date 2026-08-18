@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Silver Line Spinning Mills</title>
+  <meta name="description" content="Get in touch with Silver Line Spinning Mills, Lodhran. Find our address, phone number, and business hours." />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.46.0/tabler-icons.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="logo">
+        <img src="assets/images/logo.png" alt="Silver Line Spinning Mills" class="logo-img" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="products.html" class="nav__link">Products</a></li>
+          <li><a href="contact.html" class="nav__link active">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero (solid, no image) -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="page-hero__eyebrow reveal-down">Contact Us</p>
+      <h1 class="page-hero__title reveal-up">Let's Talk Yarn</h1>
+      <p class="page-hero__subtitle reveal-up">Reach out for orders, quotes, or general inquiries — we're happy to help.</p>
+    </div>
+  </section>
+
+  <!-- Contact Info Cards -->
+  <section class="contact-info">
+    <div class="container contact-info__grid">
+      <div class="info__card reveal-up">
+        <div class="info__icon"><i class="ti ti-map-pin"></i></div>
+        <h3>Location</h3>
+        <p>FJPV+3C5, N5<br />Lodhran, Pakistan</p>
+      </div>
+      <div class="info__card reveal-up">
+        <div class="info__icon"><i class="ti ti-phone"></i></div>
+        <h3>Phone</h3>
+        <p><a href="tel:+923008681421">+92 300 8681421</a></p>
+      </div>
+      <div class="info__card reveal-up">
+        <div class="info__icon"><i class="ti ti-clock"></i></div>
+        <h3>Business Hours</h3>
+        <p>Mon &ndash; Sat: 8:00 AM &ndash; 4:00 PM<br />Sunday: Closed</p>
+      </div>
+      <div class="info__card reveal-up">
+        <div class="info__icon"><i class="ti ti-star"></i></div>
+        <h3>Rating</h3>
+        <p><span class="stars">★★★★☆</span> 4.0 on Google Reviews</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form + Map -->
+  <section class="contact-main">
+    <div class="container contact-main__grid">
+
+      <div class="contact-form reveal-left">
+        <p class="eyebrow">Get In Touch</p>
+        <h2>Send Us a Message</h2>
+        <p class="contact-form__note">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+        <form id="contactForm" class="form">
+          <div class="form__group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+          </div>
+
+          <div class="form__group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form__group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="e.g. Bulk Yarn Order Inquiry" required />
+          </div>
+
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" id="submitBtn">Send Message</button>
+        </form>
+
+        <div class="form__success" id="formSuccess">
+          <div class="form__success-icon"><i class="ti ti-circle-check"></i></div>
+          <h3>Message Submitted Successfully</h3>
+          <p>Thank you for reaching out. We'll get back to you shortly.</p>
+        </div>
+      </div>
+
+      <div class="contact-map reveal-right">
+        <iframe
+          src="https://www.google.com/maps?q=Silver+Line+Spinning+Mills,Lodhran&output=embed"
+          width="100%" height="100%" style="border:0; min-height: 420px;"
+          allowfullscreen="" loading="lazy" title="Silver Line Spinning Mills location">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Silver Line Spinning Mills</p>
+        <p class="footer__tagline">Weaving quality into every thread.</p>
+      </div>
+      <div class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year"></span> Silver Line Spinning Mills. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
